@@ -9,8 +9,11 @@
 <body>
 <p>
     5<sup>2</sup> wynosi:
-    <% final int square = calculator.square(5);
-    out.print(square); %>
+    <% calculator.setN(5);
+        final int square = calculator.square();
+    out.print(square);
+    %>
+
 
 </p>
 </body>
