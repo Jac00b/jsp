@@ -7,11 +7,13 @@
     <title>Hello World!</title>
 </head>
 <body>
-<% Cookie cookie = new Cookie("searchId", String.valueOf(1234));
-cookie.setMaxAge(60*60*24);
-response.addCookie(cookie);
+<%
+    request.getSession().invalidate();
+    session = request.getSession();
+    session.setAttribute("userId", 123456);
+
 %>
 
-<a href="search.jsp">Search</a>
+<a href="session.jsp">Session</a>
 </body>
 </html>
