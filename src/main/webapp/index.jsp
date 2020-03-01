@@ -1,20 +1,17 @@
 <%@ page import="java.time.LocalDate" %>
 
 <%@ page contentType="text/html;charset=UTF-8" %>
-<%! private long counter = 0;%>
+<jsp:useBean id="calculator" class="pl.sda.jsp.utils.Calculator"/>
 <html>
 <head>
     <title>Hello World!</title>
 </head>
 <body>
-<%--komentarz--%>
+<p>
+    5<sup>2</sup> wynosi:
+    <% final int square = calculator.square(5);
+    out.print(square); %>
 
-<p>Dzisiaj jest <% final LocalDate now = LocalDate.now(); out.print(now);%></p>
-<p>Licznik odwiedzin: <%= ++counter%></p>
-<p>Server name: ${pageContext.request.serverName}</p>
-<p>Server port: ${pageContext.request.serverPort}</p>
-<p>Request URI: ${pageContext.request.requestURI}</p>
-
-<jsp:forward page="redirected.jsp"/>
+</p>
 </body>
 </html>
