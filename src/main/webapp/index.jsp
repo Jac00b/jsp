@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<form action="search.jsp">
+<form action="search.jsp" method="post" accept-charset="UTF-8">
     <label>Szukane słowo: <input type="text" name="query"></label>
     <label>Strona nr: <input type="text" name="page"></label>
     <label>Sortowanie:
@@ -20,5 +20,7 @@
 
     <input type="submit" value="wyślij">
 </form>
+
+<a href="search.jsp?query=blablabla&page=232&sort=asc">link</a>
 </body>
 </html>
